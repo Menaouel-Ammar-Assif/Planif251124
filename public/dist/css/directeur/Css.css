@@ -1,0 +1,474 @@
+.dataTable tbody tr 
+{
+    cursor: pointer !important;
+    transition: background-color 0.3s ease;
+}
+
+.dataTable tbody tr:hover 
+{
+    background-color: rgba(205, 234, 238, 0.47);
+}
+
+.ribbonC
+{
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+.ribbonC
+{
+    --f: .5em; 
+    position: absolute;
+    /* top: 0; */
+    /* left: 0; */
+    line-height: 1.8;
+    padding-inline: 1lh;
+    padding-bottom: var(--f);
+    border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+    clip-path: polygon(
+        100% calc(100% - var(--f)),100% 100%,calc(100% - var(--f)) calc(100% - var(--f)),var(--f) calc(100% - var(--f)), 0 100%,0 calc(100% - var(--f)),999px calc(100% - var(--f) - 999px),calc(100% - 999px) calc(100% - var(--f) - 999px));
+    transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
+    transform-origin: 100% 100%;
+    /* background-color: #F07818; */
+    background: linear-gradient(to right, #f12711, #f5af19);
+    z-index: +1;
+}
+
+@keyframes ex2 {
+    0%  {background-color: rgb(23, 181, 19);}
+    40%  {background-color: rgb(43, 213, 37);}
+    100% {background-color:rgb(35, 202, 14)}
+}
+
+.bg_succ{
+    background-color: rgb(127, 255, 110);
+    animation: ex2 1s linear 0s infinite;
+}
+:root {
+    --bs-primary: rgb(0, 17, 255);
+}
+/* .custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+} */
+.custom-tooltip {
+    --bs-tooltip-bg: red; /* Change to a different color to test */
+}
+.balls {
+width: 2.6em;
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-between;
+}
+
+.balls div {
+width: 0.6em;
+height: 0.6em;
+border-radius: 50%;
+background-color: #fc2f70;
+animation: fade 0.8s ease-in-out alternate infinite;
+}
+
+.balls div:nth-of-type(1) {
+animation-delay: -0.4s;
+}
+
+.balls div:nth-of-type(2) {
+animation-delay: -0.2s;
+}
+
+@keyframes fade {
+from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
+.justify-content-center-alert {
+display: flex;
+justify-content: center; /* Centers horizontally */
+align-items: center;     /* Centers vertically */
+height: 100%;            /* Ensures the parent takes full height */
+}
+
+.animate-charcter
+{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+        font-size: 15px;
+}
+
+@keyframes textclip {
+to {
+    background-position: 200% center;
+}
+}
+
+.sub-table {
+display: none;
+}
+
+.sub-table td input {
+    width: 100%;
+}
+
+.animate-border{
+    animation: wave 1.5s ease-in-out alternate infinite;
+}
+.animate-border h6{
+    animation: colorr 2.5s ease-in-out alternate infinite;
+}
+
+@keyframes wave {
+    from {
+        background-color: rgb(255, 255, 255);
+    }
+    to {
+        background-color: rgb(255, 241, 241);
+    }}
+
+    @keyframes colorr {
+    from {
+        color: rgb(253, 158, 158);
+    }
+    to {
+        color: rgb(255, 255, 255);
+    }
+    }
+
+    @keyframes colorr {
+    from {
+        color: rgb(253, 79, 79);
+    }
+    to {
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+#atteinte {
+    margin-left: 10px;
+    border-radius: 15px;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border: 2px solid #ff05288c;
+    overflow: hidden;
+    animation: spin 3s ease infinite;
+}
+
+#atteinte::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 2em;
+    height: 2em;
+    background-color: hsla(0, 100%, 72.2%, 0.63);
+    transform-origin: center bottom;
+    transform: scaleY(1);
+    animation: fill 3s linear infinite;
+}
+
+@keyframes spin {
+    50%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fill {
+    25%,
+    50% {
+        transform: scaleY(0);
+}
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+#atteinte2 {
+margin-left: 15px;
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-between;
+width: 2em;
+}
+
+.atteinte {
+width: 0.3em;
+height: 0.9em;
+background-color: #ff000080;
+}
+
+.atteinte:nth-of-type(1) {
+animation: grow 1.5s -0.45s ease-in-out infinite;
+}
+
+.atteinte:nth-of-type(2) {
+animation: grow 1.5s -0.3s ease-in-out infinite;
+}
+
+.atteinte:nth-of-type(3) {
+animation: grow 1.5s -0.15s ease-in-out infinite;
+}
+
+.atteinte:nth-of-type(4) {
+animation: grow 1.5s ease-in-out infinite;
+}
+
+@keyframes grow {
+0%,
+100% {
+    transform: scaleY(1);
+}
+
+50% {
+    transform: scaleY(2);
+}
+}
+
+.triangle {
+    --r:12px;
+
+    width: 55%;
+    aspect-ratio: 1/cos(30deg);
+    --_g:calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%;
+    -webkit-mask:
+    conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0)
+        0 100%/100% calc(100% - 3*var(--r)/2) no-repeat,
+    radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%),
+    radial-gradient(var(--r) at left  var(--_g)),
+    radial-gradient(var(--r) at right var(--_g));
+    clip-path: polygon(50% 0,100% 100%,0 100%);
+    background: linear-gradient(180deg,#fffb00,#EF760C00);
+}
+
+.ribbon {
+font-size: 11px;
+font-weight: bold;
+color: #fff;
+}
+.ribbon {
+--f: .5em; /* control the folded part*/
+--r: .8em; /* control the ribbon shape */
+
+position: absolute;
+/* top: 20px; */
+left: calc(-1*var(--f));
+padding-inline: .25em;
+line-height: 1.8;
+background: #0800ff;
+border-bottom: var(--f) solid #0005;
+border-right: var(--r) solid #0000;
+clip-path: 
+    polygon(0 0,0 calc(100% - var(--f)),var(--f) 100%,
+    var(--f) calc(100% - var(--f)),100% calc(100% - var(--f)),
+    calc(100% - var(--r)) calc(50% - var(--f)/2),100% 0);
+}
+
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbonn {
+font-size: 28px;
+font-weight: bold;
+color: #fff;
+}
+.ribbonn {
+--c: #fdc16a;
+--r: 20%;
+
+padding: 1em 1.5em; 
+aspect-ratio: 1;
+display: grid;
+place-content: center;
+text-align: center;
+position: relative;
+z-index: 0;
+width: fit-content;
+
+}
+.ribbonn:before {
+content: "";
+position: absolute;
+z-index: -1;
+inset: 60% 20% -40%;
+background: color-mix(in srgb, var(--c), #000 35%);
+clip-path: polygon(5% 0,95% 0,100% 100%,50% calc(100% - var(--r)),0 100%);
+/* animation: wave 1.5s ease-in-out alternate infinite; */
+animation: customAni 3s ease 0s infinite normal none;
+}
+.ribbonn:after {
+content: "";
+position: absolute;
+z-index: -1;
+inset: 10%;
+rotate: 45deg;
+outline: .1em solid #0003;
+background: var(--c);
+outline-offset: -.4em;
+border-radius: .3em;
+}
+
+@keyframes customAni {
+0% {
+    opacity: 1;
+}
+
+50% {
+    opacity: 0.2;
+}
+
+100% {
+    opacity: 1;
+}
+}
+
+/* Base styles for the alert triangle */
+.triangle-alert {
+left : 100px;
+width: 0px;
+height: 0px;
+border-style: inset;
+border-width: 0 50px 90px 50px;
+border-color: transparent transparent orange transparent;
+float: left;
+transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Styles for the alert text */
+.triangle-alert-text {
+text-align: center;
+top: 40px;
+left: -47px;
+position: relative;
+width: 93px;
+height: 93px;
+margin: 0px;
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Angkor&display=swap"); */
+
+.svgm {
+    /* font-family: "Angkor", sans-serif; */
+    width: 100%; height: 100%;
+}
+.svgm text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #000000;
+    /* font-size: 100px; */
+}
+@keyframes stroke {
+    0%   {
+        fill: rgba(78,27,44,0); stroke: rgba(0,0,0,1);
+        stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+    }
+    70%  {fill: rgba(78,27,44,0); stroke: rgba(0,0,0,1); }
+    80%  {fill: rgba(78,27,44,0); stroke: rgba(0,0,0,1); stroke-width: 3; }
+    100% {
+        fill: rgba(78,27,44,1); stroke: rgba(0,0,0,0);
+        stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.2, 1.2);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+    }
+
+    .ribbon2 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    animation: zoom-in-zoom-out 1s ease infinite;
+    }
+    .ribbon2 {
+    --c: #D95B43;
+    /* control the cutout part (adjust each variable to understand what it does) */
+    --r: .8em;  
+    --a: 60deg; /* from 0 to 90deg */
+    --d: .5em;
+
+    padding-inline: .3em;
+    margin: 0 calc(1.2lh + var(--d)) calc(.5lh + var(--r));
+    line-height: 1.75;
+    background: var(--c);
+    width: fit-content;
+    position: relative;
+    white-space: nowrap;
+    }
+    .ribbon2:before,
+    .ribbon2:after {
+    content: "";
+    position: absolute;
+    width: calc(1lh + var(--d));
+    height: calc(1.5lh + var(--r));
+    top: 0;
+    border: solid var(--c);
+    box-sizing: border-box;
+    }
+    .ribbon2:before {
+    left: 99%;
+    border-width: 1lh 1lh 0 0;
+    border-radius: 0 999px 0 0;
+    clip-path: polygon(calc(999px*cos(var(--a))) calc(1lh + var(--d) - 999px*sin(var(--a))),999px 100%,100% 100%,calc(50% + var(--d)/2) calc(100% - var(--r)),var(--d) 100%,0 100%, 0 calc(1lh + var(--d)));
+    transform-origin: 0 calc(1lh + var(--d));
+    rotate: calc(var(--a) - 90deg);
+    }
+    .ribbon2:after {
+    right: 99%;
+    border-width: 1lh 0 0 1lh;
+    border-radius: 999px 0 0 0;
+    clip-path: polygon(calc(100% - 999px*cos(var(--a))) calc(1lh + var(--d) - 999px*sin(var(--a))),-999px 100%,0 100%,calc(50% - var(--d)/2) calc(100% - var(--r)),calc(100% - var(--d)) 100%,100% 100%, 100% calc(1lh + var(--d)));
+    transform-origin: 100% calc(1lh + var(--d));
+    rotate: calc(90deg - var(--a));
+    }
+
+.wrapperr {background-color: #ffffff};
